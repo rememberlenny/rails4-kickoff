@@ -90,3 +90,9 @@ end
 # Disable annoying Sidekiq logging in tests
 Sidekiq::Logging.logger = nil
 
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end

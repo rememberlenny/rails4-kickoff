@@ -22,7 +22,6 @@ describe Users::RegistrationsController, :type => :controller do
   end
 end
 
-
 #
 # describe RegistrationsController do
 #   before do
