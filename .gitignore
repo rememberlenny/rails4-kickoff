@@ -19,6 +19,6 @@
 .zeus.sock
 .env
 
-# Ignore Sublime Text workspace files
-/*.sublime-workspace
+# JetBrains IDE settings
+.idea
 
