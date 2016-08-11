@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.1.3'
+ruby '2.3.1'
 
-gem 'rails', '~> 4.1.6'
+gem 'rails', '4.2.7'
 
 #
 # PLATFORM SPECIFIC
@@ -16,9 +16,9 @@ gem 'terminal-notifier', group: [:development]
 
 
 # Monitoring
-gem 'rack-timeout', '~> 0.1.0beta4'
-gem 'newrelic_rpm'
-gem 'airbrake', '~> 3.2.1'         # use with airbrake.io or errbit
+gem 'rack-timeout'
+# gem 'newrelic_rpm'
+# gem 'airbrake'                    # use with airbrake.io or errbit
 # gem 'airbrake_user_attributes'  # use with self-hosted errbit; see config/initializers/airbrake.rb
 # gem 'rack-google-analytics'
 
@@ -49,6 +49,8 @@ gem 'coffee-rails'
 
 # Design
 gem 'bootstrap-sass'
+gem 'bootswatch-rails'
+gem "font-awesome-rails"
 # gem 'bourbon'
 # gem 'neat'
 # gem 'country_select'
@@ -58,7 +60,7 @@ gem 'premailer-rails'
 
 # Authentication
 gem 'devise'
-gem 'cancancan', '~> 1.9'
+gem 'cancancan'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
