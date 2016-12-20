@@ -1,14 +1,15 @@
-%nav.navbar.navbar-default.navbar-fixed-top{role: 'navigation'}
-  .navbar-header
-    %button.navbar-toggle{type: 'button', data: {toggle: 'collapse', target: '.navbar-collapse'}}
-      %span.sr-only
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
-    = link_to I18n.t('brand.name'), root_path, class: 'navbar-brand'
-
-  .collapse.navbar-collapse
-    %ul.nav.navbar-nav.navbar-right
+%nav.top-bar{"data-topbar" => "", :role => "navigation"}
+  %ul.title-area
+    %li.name
+      %h1
+        = link_to I18n.t('brand.name'), root_path, class: 'navbar-brand'
+    / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+    %li.toggle-topbar.menu-icon
+      %a{:href => "#"}
+        %span Menu
+  %section.top-bar-section
+    / Right Nav Section
+    %ul.right
       - if user_signed_in?
         %li.dropdown
           %a.dropdown-toggle{href: '#', data: {toggle: 'dropdown'}}
