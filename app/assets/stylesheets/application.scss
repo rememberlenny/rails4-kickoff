@@ -7,7 +7,8 @@
 
 // Core
 @import "variables";
-@import "bootstrap";
+@import "foundation";
+@import "foundation-icons";
 @import "icons_social";
 @import "auth";
 @import "avatar";
@@ -17,7 +18,6 @@
 
 // Plugins
 @import 'nprogress';
-@import 'nprogress-bootstrap';
 
 
 
@@ -25,16 +25,8 @@
 // Minor Tweaks
 //
 
-// Padding to clear fixed nav
-body {
-  padding-top: 70px;
-}
-
-// Make sure alerts are nicely formatted
-.alert {
-  a {
-    white-space: nowrap;
-  }
+.top-bar {
+  margin-bottom: 20px;
 }
 
 // Postion loading spinner at bottom right

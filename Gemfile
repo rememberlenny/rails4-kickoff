@@ -69,7 +69,7 @@ gem "coffee-rails"
 # gem "therubyracer", platforms: :ruby
 
 # Design
-gem "bootstrap-sass", "= 3.3.5" 
+gem "foundation-rails"
 gem "bootswatch-rails"
 gem "font-awesome-rails"
 # gem "bourbon"
