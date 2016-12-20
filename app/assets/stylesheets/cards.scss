@@ -1,5 +1,4 @@
 .card__user {
-  @extend .vcard;
 
   position: relative;
   overflow: hidden;
@@ -42,7 +41,6 @@
 }
 
 .card__close {
-  @extend .close;
   position: absolute;
   top: 0;
   right: 3px;
