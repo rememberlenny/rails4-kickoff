@@ -1,4 +1,4 @@
-!!!
+!!! 5
 %html.no-js{lang: 'en'}
   %head
     %meta{charset: "utf-8"}/
@@ -10,7 +10,8 @@
       = javascript_include_tag 'ie', 'data-turbolinks-track' => true
     = javascript_include_tag 'head', 'data-turbolinks-track' => true
     = headjs_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tags
+    = csrf_meta_tag
+
     = yield :head
     = render 'layouts/airbrake'
   %body{class: "controller__#{controller_name} action__#{action_name}"}
