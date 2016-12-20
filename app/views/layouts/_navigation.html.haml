@@ -1,25 +1,29 @@
-%nav.top-bar{"data-topbar" => "", :role => "navigation"}
-  %ul.title-area
-    %li.name
-      %h1
+.top-bar
+  .top-bar-left
+    %ul.dropdown.menu{"data-dropdown-menu" => ""}
+      %li.menu-text 
         = link_to I18n.t('brand.name'), root_path, class: 'navbar-brand'
-    / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
-    %li.toggle-topbar.menu-icon
-      %a{:href => "#"}
-        %span Menu
-  %section.top-bar-section
-    / Right Nav Section
-    %ul.right
+
+  .top-bar-right
+    %ul.menu
       - if user_signed_in?
-        %li.dropdown
-          %a.dropdown-toggle{href: '#', data: {toggle: 'dropdown'}}
+        %li.divider
+        %li.has-dropdown
+          %a.dropdown-toggle{href: user_home_path, data: {toggle: 'dropdown'}}
             = render 'users/avatar', size: :tiny
-            %b.caret
-          %ul.dropdown-menu
+          %ul.dropdown
             - if current_user.is_admin?
               %li= link_to I18n.t('admin.link'), rails_admin_path, data: {"no-turbolink" => true}
+            %li.divider
+            %li
+              %label= I18n.t 'account.section.name'
             %li= link_to I18n.t('account.edit.link'), edit_user_registration_path
+            %li= link_to I18n.t('auth.edit.link'), user_authentications_path(current_user)
+            %li.divider
             %li= link_to I18n.t('auth.logout.link'), destroy_user_session_path, rel: :nofollow
-      - unless user_signed_in?
+            %li.divider
+
+      - else
+        %li.divider
         %li= link_to I18n.t('auth.signup.link'), new_user_registration_path
         %li= link_to I18n.t('auth.login.link'), new_user_session_path
